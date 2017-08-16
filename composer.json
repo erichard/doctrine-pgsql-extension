@@ -1,0 +1,23 @@
+{
+    "name": "erichard/postgresql-doctrine-type",
+    "description": "Doctrine implementation of some useful PostgreSQL data types",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^6.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Erwan Richard",
+            "email": "erwan.richard@lephare.com"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "^2.6"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    }
+}
