@@ -108,7 +108,12 @@ class DateRange implements \JsonSerializable
      */
     public static function toString(DateRange $dateRange)
     {
-        $string = '['.$dateRange->getStartDate()->format($dateRange->getFormat()).',';
+        $string = '[';
+
+        $string .= null === $dateRange->getStartDate() ?
+            ',':
+            $dateRange->getStartDate()->format($dateRange->getFormat()).','
+        ;
 
         $string .= null === $dateRange->getEndDate() ?
             ')':
