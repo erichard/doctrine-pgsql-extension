@@ -2,7 +2,7 @@
 
 namespace PostgreSQLDoctrineType;
 
-class DateRange
+class DateRange implements \JsonSerializable
 {
     const REGEX = '(\[|\()"?(\d{4}-\d{2}-\d{2}( \d{2}:\d{2}:\d{2})?)?"?,"?(\d{4}-\d{2}-\d{2}( \d{2}:\d{2}:\d{2})?)?"?(\]|\))';
 
@@ -139,5 +139,14 @@ class DateRange
     public function __toString()
     {
         return self::toString($this);
+    }
+
+    public function jsonSerialize()
+    {
+        return [
+            'startDate' => $this->startDate,
+            'endDate' => $this->endDate,
+            'format' => $this->format,
+        ];
     }
 }
