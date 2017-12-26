@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Doctrine\DBAL;
+namespace PostgreSQLDoctrineType\DBAL\Type;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\JsonType as BaseJsonType;
