@@ -2,7 +2,6 @@
 
 namespace PostgreSQLDoctrineType\DBAL\Type;
 
-use AppBundle\DateRange;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 
 class TsRangeType extends DateRangeType
