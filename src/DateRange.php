@@ -52,7 +52,7 @@ class DateRange implements \JsonSerializable
         $endDate = empty($matches[4]) ? null : new \DateTime($matches[4]);
 
         if (null !== $endDate && ')' === $upperLimit) {
-            $endDate = $endDate->modify('+1 day');
+            $endDate = $endDate->modify('-1 day');
         }
 
         $format = empty($matches[3]) && empty($matches[5]) ? 'Y-m-d' : 'Y-m-d H:i:s';

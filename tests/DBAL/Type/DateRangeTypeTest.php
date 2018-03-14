@@ -36,9 +36,9 @@ class DateRangeTypeTest extends TestCase
             ['["2017-08-16 16:56:00","2017-08-16 17:56:00"]', new DateRange(new \DateTime('2017-08-16 16:56:00'), new \DateTime('2017-08-16 17:56:00'), 'Y-m-d H:i:s')],
             ['[,"2017-08-16 17:56:00"]', new DateRange(null, new \DateTime('2017-08-16 17:56:00'), 'Y-m-d H:i:s')],
             ['["2017-08-16 16:56:00",]', new DateRange(new \DateTime('2017-08-16 16:56:00'), null, 'Y-m-d H:i:s')],
-            ['[2017-08-16,2017-09-30)', new DateRange(new \DateTime('2017-08-16'), new \DateTime('2017-10-01'), 'Y-m-d')],
+            ['[2017-08-16,2017-09-30)', new DateRange(new \DateTime('2017-08-16'), new \DateTime('2017-09-29'), 'Y-m-d')],
             ['[2017-08-16,)', new DateRange(new \DateTime('2017-08-16'), null, 'Y-m-d')],
-            ['[,2017-09-30)', new DateRange(null, new \DateTime('2017-10-01'), 'Y-m-d')],
+            ['[,2017-09-30)', new DateRange(null, new \DateTime('2017-09-29'), 'Y-m-d')],
         ];
     }
 
